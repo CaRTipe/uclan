@@ -67,7 +67,7 @@ if (isset($_GET['logout'])) {
             display: flex;
             justify-content: center;
             margin: 20px 0;
-            gap: 20px;
+            gap: 15px;
         }
 
         .product-categories a {
