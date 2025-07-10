@@ -47,6 +47,7 @@ include "myscript.php"; // Include the script to fetch products
     <?php 
     foreach ($jumpers as $jumper) { // Loop through each jumper product
         echo "<div class='jumper p-3 mb-3'>";
+        echo "<img src='./jumpers/" . $jumper['image'] . "' alt='" . $jumper['name'] . "' class='img-fluid'>"; // Display jumper image
         echo "<h2>" . $jumper['name'] . "</h2>";
         echo "<p>Description: " . $jumper['description'] . "</p>";
         echo "<p>Price: $" . $jumper['price'] . "</p>";

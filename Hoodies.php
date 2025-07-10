@@ -41,6 +41,7 @@ include "myscript.php"; // Include the script to fetch products
       <?php 
       foreach ($hoodies as $hoodie) { // Loop through each hoodie product
           echo "<div class='hoodie p-3 mb-3'>";
+          echo "<img src='./hoodies/" . $hoodie['image'] . "' alt='" . $hoodie['name'] . "' class='img-fluid'>"; // Display hoodie image
           echo "<h2>" . $hoodie['name'] . "</h2>";
           echo "<p>Description: " . $hoodie['description'] . "</p>";
           echo "<p>Price: $" . $hoodie['price'] . "</p>";

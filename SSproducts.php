@@ -44,6 +44,7 @@ include "myscript.php"; // Include the script to fetch products
      <?php 
      foreach ($tshirts as $tshirt) { // Loop through each t-shirt product
         echo "<div class='tshirt'>";
+        echo "<img src='./tshirts/" . $tshirt['image'] . "' alt='" . $tshirt['name'] . "' class='img-fluid'>"; // Display t-shirt image
         echo "<h2>" . $tshirt['name'] . "</h2>";
         echo "<p>Description: " . $tshirt['description'] . "</p>";
         echo "<p>Price: $" . $tshirt['price'] . "</p>";
@@ -52,6 +53,7 @@ include "myscript.php"; // Include the script to fetch products
      }
       foreach ($jumpers as $jumper) { // Loop through each jumper product
           echo "<div class='jumper'>";
+          echo "<img src='./jumpers/" . $jumper['image'] . "' alt='" . $jumper['name'] . "' class='img-fluid'>"; // Display jumper image
           echo "<h2>" . $jumper['name'] . "</h2>";
           echo "<p>Description: " . $jumper['description'] . "</p>";
           echo "<p>Price: $" . $jumper['price'] . "</p>";
@@ -60,6 +62,7 @@ include "myscript.php"; // Include the script to fetch products
       }
       foreach ($hoodies as $hoodie) { // Loop through each hoodie product
           echo "<div class='hoodie'>";
+          echo "<img src='./hoodies/" . $hoodie['image'] . "' alt='" . $hoodie['name'] . "' class='img-fluid'>"; // Display hoodie image
           echo "<h2>" . $hoodie['name'] . "</h2>";
           echo "<p>Description: " . $hoodie['description'] . "</p>";
           echo "<p>Price: $" . $hoodie['price'] . "</p>";

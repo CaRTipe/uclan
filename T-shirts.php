@@ -48,6 +48,7 @@ include "myscript.php"; // Include the script to fetch products
     <?php
     foreach ($tshirts as $tshirt) { // Loop through each t-shirt product
         echo "<div class='tshirt p-3 mb-3'>";
+        echo "<img src='./tshirts/" . $tshirt['image'] . "' alt='" . $tshirt['name'] . "' class='img-fluid'>"; // Display t-shirt image
         echo "<h2>" . $tshirt['name'] . "</h2>";
         echo "<p>Description: " . $tshirt['description'] . "</p>";
         echo "<p>Price: $" . $tshirt['price'] . "</p>";

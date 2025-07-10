@@ -156,6 +156,7 @@ if (isset($_GET['logout'])) {
         <?php foreach ($tshirts as $tshirt) {
             echo "
         <div class='tshirt'>
+            <img src='./tshirts/" . $tshirt['image'] . "' alt='" . $tshirt['name'] . "' class='img-fluid'> // Display t-shirt image
             <h2 class='text'>{$tshirt['name']}</h2>
             <p>{$tshirt['description']} <button class='unstyled-button'>view more</button></p>
             <p class='cost'>£{$tshirt['price']}</p>
@@ -173,6 +174,7 @@ if (isset($_GET['logout'])) {
         <?php foreach ($jumpers as $jumper) {
             echo "
         <div class='jumper'>
+            <img src='./jumpers/" . $jumper['image'] . "' alt='" . $jumper['name'] . "' class='img-fluid'> // Display jumper image
             <h2 class='text'>{$jumper['name']}</h2>
             <p>{$jumper['description']} <button class='unstyled-button'>view more</button></p>
             <p class='cost'>£{$jumper['price']}</p>
@@ -191,6 +193,7 @@ if (isset($_GET['logout'])) {
         <?php foreach ($hoodies as $hoodie) {
             echo "
         <div class='hoodie'>
+            <img src='./hoodies/" . $hoodie['image'] . "' alt='" . $hoodie['name'] . "' class='img-fluid'> // Display hoodie image
             <h2 class='text'>{$hoodie['name']}</h2>
             <p>{$hoodie['description']} <button class='unstyled-button'>view more</button></p>
             <p class='cost'>£{$hoodie['price']}</p>
