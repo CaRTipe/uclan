@@ -17,7 +17,28 @@
 
 
 //  having a table users with id,name email and password , attempt to login and after successful login redirect to dashboard.php
-
+// collect tshirts
+$sql = "SELECT * FROM tshirts";
+$result = $conn->query($sql);
+if ($result->num_rows > 0) {
+    $tshirts = $result->fetch_all(MYSQLI_ASSOC);
+} else {
+    $tshirts = [];
+}
+$sql = "SELECT * FROM jumpers";
+$result = $conn->query($sql);
+if ($result->num_rows > 0) {
+    $jumpers = $result->fetch_all(MYSQLI_ASSOC);
+} else {
+    $jumpers = [];
+}
+$sql = "SELECT * FROM hoodies";
+$result = $conn->query($sql);
+if ($result->num_rows > 0) {
+    $hoodies = $result->fetch_all(MYSQLI_ASSOC);
+} else {
+    $hoodies = [];
+}
 // if(isset($_POST['submit']))
 // {
 //     $name = $_POST['name'];
@@ -72,4 +93,5 @@ if(isset($_POST['login']))
     }
 }
 //  
+
 

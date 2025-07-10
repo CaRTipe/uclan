@@ -1,6 +1,7 @@
 <?php
 // Start session
-session_start();
+include "myscript.php"; // Include the script to fetch products
+// session_start();
 
 // Check if user is logged in
 if (!isset($_SESSION['name'])) {
@@ -152,102 +153,53 @@ if (isset($_GET['logout'])) {
 
     <div class="container">
         <!-- T-shirts section -->
-        <div class="tshirt">
-            <img src="tshirts/tshirt(1).jpg" alt="T-Shirt 1">
-            <h2 class="text">UCLan Logo Tshirt-Navy Blue New</h2>
-            <p class="description">Cotton authentic character and practicality are combined in this summery t-shirt for students that goes with everything to create casual looks. Perfect for those summer days <button class="unstyled-button">view more</button></p>
-            <p class="cost">£19.99</p>
-            <button class="atc">ADD TO CART</button>
+        <?php foreach ($tshirts as $tshirt) {
+            echo "
+        <div class='tshirt'>
+            <h2 class='text'>{$tshirt['name']}</h2>
+            <p>{$tshirt['description']} <button class='unstyled-button'>view more</button></p>
+            <p class='cost'>£{$tshirt['price']}</p>
+            <button class='btn btn-warning'>ADD TO CART</button>
         </div>
-        <div class="tshirt">
-            <img src="tshirts/tshirt(2).jpg" alt="T-Shirt 2">
-            <h2 class="text">UCLan Logo Tshirt-Rusty Red New</h2>
-            <p>Cotton authentic character and practicality are combined in this summery t-shirt for students that goes with everything to create casual looks. Perfect for those summer days <button class="unstyled-button">view more</button></p>
-            <p class="cost">£19.99</p>
-            <button class="atc">ADD TO CART</button>
-        </div>
-        <div class="tshirt">
-            <img src="tshirts/tshirt(3).jpg" alt="T-Shirt 3">
-            <h2 class="text">UCLan Logo Tshirt-Burgundy</h2>
-            <p>Cotton authentic character and practicality are combined in this summery t-shirt for students that goes with everything to create casual looks. Perfect for those summer days <button class="unstyled-button">view more</button></p>
-            <p class="cost">£19.99</p>
-            <button class="atc">ADD TO CART</button>
-        </div>
-        <div class="tshirt">
-            <img src="tshirts/tshirt(4).jpg" alt="T-Shirt 4">
-            <h2 class="text">UCLan Logo Tshirt-Pink</h2>
-            <p>Cotton authentic character and practicality are combined in this summery t-shirt for students that goes with everything to create casual looks. Perfect for those summer days <button class="unstyled-button">view more</button></p>
-            <p class="cost">£19.99</p>
-            <button class="atc">ADD TO CART</button>
-        </div>
+            ";
+        }
+            ?>
     </div>
 
     <h1 id="jumpers" style="text-align: center; font: 70; color: #0789bd;" class="my-3">Jumpers</h1>
 
     <div class="container">
         <!-- Jumpers section -->
-        <div class="jumper">
-            <img src="jumpers/jumper(1).jpg" alt="Jumper 1">
-            <h2 class="text">UCLan Logo Jumper-Purple</h2>
-            <p>Cotton authentic character and practicality are combined in this winter jumper for students that goes with everything to create casual looks <button class="unstyled-button">view more</button></p>
-            <p class="cost">£29.99</p>
-            <button class="atc">ADD TO CART</button>
+        <?php foreach ($jumpers as $jumper) {
+            echo "
+        <div class='jumper'>
+            <h2 class='text'>{$jumper['name']}</h2>
+            <p>{$jumper['description']} <button class='unstyled-button'>view more</button></p>
+            <p class='cost'>£{$jumper['price']}</p>
+            <button class='btn btn-warning'>ADD TO CART</button>
         </div>
-        <div class="jumper">
-            <img src="jumpers/jumper(2).jpg" alt="Jumper 2">
-            <h2 class="text">UCLan Logo Jumper-Rusty Red</h2>
-            <p>Cotton authentic character and practicality are combined in this winter jumper for students that goes with everything to create casual looks <button class="unstyled-button">view more</button></p>
-            <p class="cost">£29.99</p>
-            <button class="atc">ADD TO CART</button>
-        </div>
-        <div class="jumper">
-            <img src="jumpers/jumper(3).jpg" alt="Jumper 3">
-            <h2 class="text">UCLan Logo Jumper-Water Blue</h2>
-            <p>Cotton authentic character and practicality are combined in this winter jumper for students that goes with everything to create casual looks <button class="unstyled-button">view more</button></p>
-            <p class="cost">£29.99</p>
-            <button class="atc">ADD TO CART</button>
-        </div>
-        <div class="jumper">
-            <img src="jumpers/jumper(4).jpg" alt="Jumper 4">
-            <h2 class="text">UCLan Logo Jumper-White</h2>
-            <p>Cotton authentic character and practicality are combined in this winter jumper for students that goes with everything to create casual looks <button class="unstyled-button">view more</button></p>
-            <p class="cost">£29.99</p>
-            <button class="atc">ADD TO CART</button>
-        </div>
+    ";
+
+        }
+            ?>
     </div>
 
     <h1 id="hoodies" style="text-align: center; font: 70; color: #0789bd;" class="my-3">Hoodies</h1>
 
     <div class="container">
         <!-- Hoodies section -->
-        <div class="hoodie">
-            <img src="hoodies/hoodie(1).jpg" alt="Hoodie 1">
-            <h2 class="text">UCLan Logo Hoodie-Purple</h2>
-            <p>Cotton authentic character and practicality are combined in this winter hoodie for students that goes with everything to create casual looks <button class="unstyled-button">view more</button></p>
-            <p class="cost">£39.99</p>
-            <button class="atc">ADD TO CART</button>
+        <?php foreach ($hoodies as $hoodie) {
+            echo "
+        <div class='hoodie'>
+            <h2 class='text'>{$hoodie['name']}</h2>
+            <p>{$hoodie['description']} <button class='unstyled-button'>view more</button></p>
+            <p class='cost'>£{$hoodie['price']}</p>
+            <button class='btn btn-warning'>ADD TO CART</button>
         </div>
-        <div class="hoodie">
-            <img src="hoodies/hoodie(2).jpg" alt="Hoodie 2">
-            <h2 class="text">UCLan Logo Hoodie-Black</h2>
-            <p>Cotton authentic character and practicality are combined in this winter hoodie for students that goes with everything to create casual looks <button class="unstyled-button">view more</button></p>
-            <p class="cost">£39.99</p>
-            <button class="atc">ADD TO CART</button>
-        </div>
-        <div class="hoodie">
-            <img src="hoodies/hoodie(3).jpg" alt="Hoodie 3">
-            <h2 class="text">UCLan Logo Hoodie-Navy Blue</h2>
-            <p>Cotton authentic character and practicality are combined in this winter hoodie for students that goes with everything to create casual looks <button class="unstyled-button">view more</button></p>
-            <p class="cost">£39.99</p>
-            <button class="atc">ADD TO CART</button>
-        </div>
-        <div class="hoodie">
-            <img src="hoodies/hoodie(4).jpg" alt="Hoodie 4">
-            <h2 class="text">UCLan Logo Hoodie-Light Grey</h2>
-            <p>Cotton authentic character and practicality are combined in this winter hoodie for students that goes with everything to create casual looks <button class="unstyled-button">view more</button></p>
-            <p class="cost">£39.99</p>
-            <button class="atc">ADD TO CART</button>
-        </div>
+    ";
+
+        }
+            ?>
     </div>
 
     <?php
