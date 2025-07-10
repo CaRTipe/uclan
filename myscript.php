@@ -92,6 +92,7 @@ if(isset($_POST['login']))
         exit;
     }
 }
-//  
+// Function to handle adding items to cart
+
 
 

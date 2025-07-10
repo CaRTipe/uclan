@@ -156,11 +156,11 @@ if (isset($_GET['logout'])) {
         <?php foreach ($tshirts as $tshirt) {
             echo "
         <div class='tshirt'>
-            <img src='./tshirts/" . $tshirt['image'] . "' alt='" . $tshirt['name'] . "' class='img-fluid'> // Display t-shirt image
+            <img src='./tshirts/" . $tshirt['image'] . "' alt='" . $tshirt['name'] . "' class='img-fluid'> 
             <h2 class='text'>{$tshirt['name']}</h2>
             <p>{$tshirt['description']} <button class='unstyled-button'>view more</button></p>
             <p class='cost'>£{$tshirt['price']}</p>
-            <button class='btn btn-warning'>ADD TO CART</button>
+            <button class='btn btn-warning' name='add_to_cart'>ADD TO CART</button>
         </div>
             ";
         }
@@ -174,11 +174,11 @@ if (isset($_GET['logout'])) {
         <?php foreach ($jumpers as $jumper) {
             echo "
         <div class='jumper'>
-            <img src='./jumpers/" . $jumper['image'] . "' alt='" . $jumper['name'] . "' class='img-fluid'> // Display jumper image
+            <img src='./jumpers/" . $jumper['image'] . "' alt='" . $jumper['name'] . "' class='img-fluid'> 
             <h2 class='text'>{$jumper['name']}</h2>
             <p>{$jumper['description']} <button class='unstyled-button'>view more</button></p>
             <p class='cost'>£{$jumper['price']}</p>
-            <button class='btn btn-warning'>ADD TO CART</button>
+            <button class='btn btn-warning' name='add_to_cart'>ADD TO CART</button>
         </div>
     ";
 
@@ -193,11 +193,11 @@ if (isset($_GET['logout'])) {
         <?php foreach ($hoodies as $hoodie) {
             echo "
         <div class='hoodie'>
-            <img src='./hoodies/" . $hoodie['image'] . "' alt='" . $hoodie['name'] . "' class='img-fluid'> // Display hoodie image
+            <img src='./hoodies/" . $hoodie['image'] . "' alt='" . $hoodie['name'] . "' class='img-fluid'> 
             <h2 class='text'>{$hoodie['name']}</h2>
             <p>{$hoodie['description']} <button class='unstyled-button'>view more</button></p>
             <p class='cost'>£{$hoodie['price']}</p>
-            <button class='btn btn-warning'>ADD TO CART</button>
+            <button class='btn btn-warning' name='add_to_cart'>ADD TO CART</button>
         </div>
     ";
 
